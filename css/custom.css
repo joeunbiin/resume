@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Noto+Serif+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap');
+
+html {height: 100%;}
+
+*,
+*:after,
+*:before {box-sizing: border-box;  padding: 0; margin: 0;}
+
+body {font-family: 'Bodoni Moda', serif; font-family: 'Noto Serif KR', serif;
+	  background: #fff; font-weight: 400;
+	  font-size: 100%; color: #333; height: 100%;}
+
+.js body {overflow: hidden;}
+
+a {color: #555; text-decoration: none; outline: none;}
+
+a:hover {color: #000;}
+
+.container,
+.bb-custom-wrapper,
+.bb-bookblock {width: 100%;height: 100%;}
+
+.container {position: relative; left: 0px;
+			transition: left 0.3s ease-in-out;}
+
+.slideRight {left: 240px;}
+
+.no-js .container {padding-left: 240px;}
+
+.menu-panel {background: #51ac51; width: 240px; height: 100%;
+			 position: fixed; z-index: 1000; top: 0; left: 0;
+			 text-shadow: 0 1px 1px rgba(0,0,0,0.1);}
+
+.js .menu-panel {position: absolute; left: -240px;}
+
+.menu-panel h3 {font-size: 1.8em; padding: 30px; font-weight: 300;
+				color: #fff; box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);}
+
+.menu-toc {list-style: none;}
+
+.menu-toc li a {display: block; color: #fff;
+				font-size: 1.1em; line-height: 3.5; padding: 0 20px;
+				cursor: pointer; background: #51ac51;
+				border-bottom: 1px solid #3d863d;}
+
+.menu-toc li a:hover,
+.menu-toc li.menu-toc-current a {background: #3d863d;}
+
+.menu-panel div {margin-top: 10px;}
+
+.menu-panel div:nth-of-type(1) p {text-transform: uppercase; font-size: 0.7em;
+								  line-height: 1; padding: 15px 20px;
+								  display: block; border: none; color: #3f8b3f;
+								  letter-spacing: 1px; font-weight: 800; transition: all 0.5s;
+								  text-shadow: 0 1px rgba(255,255,255,0.2);}
+ 
+.menu-panel div:nth-of-type(1) p:hover {background: inherit; color: #b6d6b6;
+						 				text-shadow: none;}
+.barcode {text-align: right; position: absolute; margin-right: 8px;
+		  bottom: 0; right: 0; margin-bottom: 10px; color: #194e19;}
+		
+.barcode p:nth-child(1) {font-size: 40px; font-family: 'Libre Barcode 128', cursive; }
+
+.barcode p:nth-child(2) {font-size: 16px; margin-top: -10px;}          			 
+
+.bb-custom-wrapper nav {top: 20px; left: 60px; position: absolute; 
+						z-index: 1000;}
+
+.bb-custom-wrapper nav span,
+.menu-button {position: absolute; width: 32px; height: 32px;
+			  top: 0; left: 0; background: #51ac51;
+			  border-radius: 50%; color: #fff;
+			  line-height: 30px; text-align: center; speak: none;
+			  font-weight: bold; cursor: pointer;}
+
+.bb-custom-wrapper nav span:hover,
+.menu-button:hover {background: #316031}
+
+.bb-custom-wrapper nav span:last-child {left: 40px;}
+
+.menu-button {z-index: 1000; left: 20px; top: 20px; 
+			  text-indent: -9000px;}
+
+.menu-button:after {position: absolute;content: '';width: 50%;
+					height: 2px; background: #fff; top: 50%;
+					margin-top: -1px; left: 25%;
+					box-shadow: 0 -4px #fff, 0 4px #fff;}
+
+.no-js .bb-custom-wrapper nav span,
+.no-js .menu-button {display: none;}
+
+.js .content {position: absolute; overflow: hidden; 
+			  top: 60px; left: 0;width: 100%; bottom: 50px; 
+			  -webkit-font-smoothing: subpixel-antialiased;}
+
+.scroller {padding: 10px 5% 10px 5%;}
+
+.js .content:before,
+.js .content:after {content: ''; position: absolute; top: 0; left: 0;
+					width: 100%; height: 20px; z-index: 100; 
+					pointer-events: none;
+					background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);}
+
+.js .content:after {top: auto; bottom: 0;
+					background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);}
+
+.content h2 {font-weight: 700; font-size: 4em; padding: 0 0 10px;
+			 color: #333; margin: 0 1% 40px; text-align: left;
+			 box-shadow: 0 10px 0 rgba(0,0,0,0.025); 
+			 text-shadow: 0 0 2px #fff;}
+
+.no-js .content h2 {padding: 40px 1% 20px;}
+
+.content p {font-size: 1.2em; line-height: 1.6;
+			font-weight: 300; padding: 5px 8%; text-align: justify;}
+
+@media screen and (max-width: 800px) {
+	.no-js .menu-panel {display: none;}
+	.no-js .container {padding: 0;}
+}
+
+@media screen and (max-width: 400px) {
+	.menu-panel,
+	.content {font-size: 75%;}
+}
+
+
+
+/* item1 About */
+.item1_box img {border-radius: 20px;}
+.item1_box {max-width: 800px; margin: 0 auto; padding-top: 40px; padding-bottom: 30px;}
+.item1_box p {text-align: center; font-size: 23px;}
+.item1_box p:nth-child(1) {margin-bottom: 30px;} 
+.item1_box p:hover a {color: #228b22}
+
+
+/* item2 history */
+.item2_box {max-width: 800px; margin: 0 auto; padding-top: 40px;}
+.item2_box > ul::before {content: ''; position: absolute;
+    					 left: 50%; top: 0; transform: translateY(-50%);
+    					 width: 15px;  height: 15px; margin-left: -7.5px;
+    					 background: #5eb85e;}
+.item2_box > ul::after {content: ''; position: absolute;
+    					 left: 50%; bottom: 0; transform: translateY(50%);
+    					 width: 15px; height: 15px; margin-left: -7.5px;
+    					 background: #5eb85e;}
+.item2_box > ul {text-align: center; margin: 0 auto 30px; position: relative; }
+.item2_box > ul li:nth-of-type(1) {margin-top: 70px;}
+.item2_box > ul li h3 {font-size: 53px; margin-bottom: 10px; font-weight: bold;}
+.item2_box > ul li p {text-align: center; font-size: 20px; line-height: 1; color: #666;}
+.item2_box > ul li:nth-of-type(1)::before {content: ''; display: block;
+										   width: 1px;  height: 60px;
+										   margin: 10px auto; background: #5eb85e;}
+.item2_box > ul li::after {content: ''; display: block;
+    					   width: 1px;  height: 100px;
+    					   margin: 15px auto; background: #5eb85e;}
+.item2_box > ul li:nth-of-type(2)::after
+							{content: ''; display: block;
+			 				 width: 1px;  height: 30px;
+    		 				 margin: 10px auto; background: #5eb85e;}
+.item2_box > ul li:nth-of-type(7)::after {content: ''; display: block;
+											width: 1px;  height: 60px;
+											margin: 22px auto; background: #5eb85e;}
+
+
+/* item3 Certificate */
+.item3_box {max-width: 800px; margin: 0 auto; padding-top: 40px; padding-bottom: 30px;}
+.item3_box ul li {font-size: 20px; line-height: 2; text-align: center;}
+.loading {position: fixed; top: 0; left: 0; bottom: 0; right: 0;  
+		  z-index: 999999999;}
+.loading i {font-size: 70px; position: absolute; top: 520px;
+			transform: translate(-50%, -50%); left: 47.3%; color: #228b22;
+ 			animation: spin 2s linear infinite;}
+@keyframes spin {0% {transform: rotate(0deg);} 100% {transform: rotate(360deg)}}
+.loading p {font-size: 28px; position: absolute; top: 550px; z-index: 999999999;
+			transform: translate(-50%, -50%); left: 58.8%; }
+
+
+/* item4 그래프 */
+.item4_box {max-width: 1000px; margin: 0 auto; padding-top: 40px;}
+.graph {display: flex; flex-wrap: wrap; padding-bottom: 50px;
+		align-items: center; justify-content: space-around; }
+.graph .chart {width: 250px; height: 250px; 
+			   margin: 55px 10px; border-radius: 50%;
+			   transition: all 0.5s; position: relative;}
+.graph .chart .center {position: absolute; top: 50%; left: 50%; line-height: 150px;
+					   transform: translate(-50%,-50%); display: block;
+					   width: 150px; height: 150px; border-radius: 50%;
+					   font-size: 30px; background: #fff; text-align: center;}
+.graph .chart .center .number {text-align: center; line-height: 140px; font-size: 25px;}
+.graph .chart .center p:nth-child(2) {margin-top: 55px; font-weight: 500; 
+									  text-align: center; font-size: 27px; font-weight: bold;} 
+
+
+/* item5 이력서 & 자기소개서 */
+.item5_box {max-width: 800px; margin: 0 auto; padding-top: 40px; padding-bottom: 30px; align-items: center;
+			display: flex; justify-content: space-around;}
+.item5_box > div {position: relative;}
+.item5_box > div h3 {text-align: center; font-size: 30px; padding-bottom: 20px; 
+					 font-weight: bold; margin-top: 20px;}
+.item5_box > div a {text-align: right; position: absolute; bottom: -10px; right: -30px;
+					transform: translate(-50%, -50%); font-size: 38px;
+	 				color: #333; transition: all 0.5s;}
+.item5_box > div a:hover {color: #228b22}
+
+
+/* item6 포트폴리오 */
+.item6_box {max-width: 1200px; margin: 0 auto; padding-top: 40px; padding-bottom: 30px;}	
+.item6_box > div {text-align: center; position: relative;
+				  overflow: hidden; max-width: 950px; margin: 0 auto 80px;}
+.item6_box .port_box .line {position: absolute; top: 10px; bottom: 10px; right: 10px; left: 10px; }
+.item6_box .port_box .line .topline {position: absolute; left: 0; right: 100%; top:0;
+                                  height: 2px; background: #fff; z-index: 999999;
+                                  transition: all 0.5s ease-out;}
+.item6_box .port_box .line .bottomline {position: absolute; left: 100%; right: 0; bottom: 0;
+                                     height: 2px; background: #fff; z-index: 999999;
+                                     transition: all 0.5s ease-out;}
+.item6_box .port_box .line .leftline {position: absolute; right: 0; top: 100%; bottom: 0;
+                                    width: 2px; background: #fff; z-index: 999999;
+                                    transition: all 0.5s ease-out;}
+.item6_box .port_box .line .rightline {position: absolute; left: 0; top: 0; bottom: 100%;
+                                    width: 2px; background: #fff; z-index: 999999;
+                                    transition: all 0.5s ease-out;}
+.item6_box .port_box:hover .line .topline {right: 0}
+.item6_box .port_box:hover .line .bottomline {left: 0;}
+.item6_box .port_box:hover .line .leftline {top: 0;}
+.item6_box .port_box:hover .line .rightline {bottom: 0;}
+.item6_box .port_box::before {content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+						  background: rgba(0,0,0,0); transition: all 0.5s; z-index: 1} 
+.item6_box .port_box:hover::before {background: rgba(0,0,0,0.5);}
+.item6_box .port_box:hover .txtbox {opacity: 1;}
+.item6_box .txtbox {position: absolute; z-index: 999; top: 50%; left: 50%; padding: 10px 0 20px;
+					 transform: translate(-50%, -50%); opacity: 0; width: 80%;
+					 transition: all 0.5s; background: rgba(221, 221, 221, 0.9) }
+.item6_box .txtbox h3 {font-size: 28px; padding: 20px; font-weight: bold;}						   
+.item6_box .txtbox p {line-height: 1.8;}
+.item6_box .txtbox p:nth-of-type(1) {padding-bottom: 15px; font-size: 17px;}					 
+.item6_box .txtbox p:nth-of-type(2) {padding-bottom: 18px; font-size: 15px;}	
+.item6_box .txtbox a {background: #777; color: #fff; padding: 5px 10px;
+						font-size: 14px; transition: all 0.5s;}
+.item6_box .txtbox a:hover {background :#228b22}
+
+
+/* 리뉴얼 */
+.item6_box .txtbox button {background: none; border: 1px solid #fff; padding: 5px 10px}
+.tot_board .tabmenu {overflow: hidden; border-bottom: 1px solid #ddd;}
+.tot_board .tabmenu li {float: left; border: 1px solid #ddd; border-bottom: none; padding: 20px 50px;
+                       cursor: pointer; font-size: 21px;}
+.tot_board .tabmenu li.active {background: #3ea83e; color: #fff;}
+.tot_board .contents > div {display: none}
+.tot_board .contents > div.active {display: block}
+.tot_board .contents {position: relative;}
+
+
+
+/* item7 Please */
+.item7_box {max-width: 800px; margin: 0 auto; padding-top: 40px; padding-bottom: 30px;}
+.form1 {border: 4px double #228b22; border-radius: 10px; }
+.form1 fieldset {margin: 2% 3%}  
+.form1 p {padding: 1% 0; text-align: left;}
+.form1 label {width: 25%; display: inline-block; font-size: 22px; font-weight: bold;}
+.form1 input {border: 1px solid #333; width: 20%; padding: 1% 0; vertical-align: middle;}
+.form1 #message {width: 58%; height: 80px; text-align: left; 
+				 vertical-align: top; border: 1px solid #333}
+.form1 p:nth-of-type(4) > label {vertical-align: top;}
+.form1 input[type=file] {border: none;}
+.form1 #attach {width: 60%;}
+.form1 p:nth-of-type(6) {text-align: center; margin-top: 5%}
+.form1 p:nth-of-type(6) button {padding: 1% 4%; font-size: 20px; border-radius: 5px; margin: 0 6px;
+								font-family: 'Bodoni Moda', serif; background: #777; 
+								color: #fff;transition: all 0.5s;}
+.form1 P:nth-of-type(6) button[type=submit]:hover {background :#2d962d}
+.form1 P:nth-of-type(6) button[type=reset] {cursor: pointer;}
+.form1 P:nth-of-type(6) button[type=reset]:hover {background: #1a691a}
+.please ::placeholder {color: #222; font-family: 'Noto Serif KR', serif; 
+					   padding-left: 1%; font-size: 13px;}		
+
+
+/* item8 THE END*/
+.item8_box {max-width: 1000px; margin: 0 auto;}
+.item8_box p {text-align: center; line-height: 2; font-size: 20px; padding-top: 40px;}
+#item8 {position: relative;}
+#item8 span {font-size: 70px; font-weight: bold; font-family: 'Cedarville Cursive', cursive;
+			 position: absolute; bottom: -35%; right: 10%; transform: rotate(-7deg);}
