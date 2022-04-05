@@ -129,7 +129,7 @@ a:hover {color: #000;}
 
 
 /* item1 About */
-.item1_box img {border-radius: 20px; max-width: 250px;}
+.item1_box img {border-radius: 20px; max-width: 340px;}
 .item1_box {max-width: 800px; margin: 0 auto; padding-top: 40px; padding-bottom: 30px;}
 .item1_box p {text-align: center; font-size: 23px; line-height: 1.2;}
 .item1_box p:nth-child(1) {margin-bottom: 30px;} 
