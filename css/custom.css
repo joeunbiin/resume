@@ -170,13 +170,13 @@ a:hover {color: #000;}
 .item3_box ul li {font-size: 20px; line-height: 2; text-align: center;}
 .loading {position: fixed; top: 0; left: 0; bottom: 0; right: 0;  
 		  z-index: 999999999;}
-.loading i {font-size: 70px; position: absolute; top: 520px;
+.loading > i {font-size: 70px; position: absolute; top: 520px;
 			transform: translate(-50%, -50%); left: 47.3%; color: #228b22;
  			animation: spin 2s linear infinite;}
 @keyframes spin {0% {transform: rotate(0deg);} 100% {transform: rotate(360deg)}}
-.loading p {font-size: 28px; position: absolute; top: 550px; z-index: 999999999;
-			transform: translate(-50%, -50%); left: 58.8%; }
-
+.loading p {font-size: 20px; position: absolute; top: 550px; z-index: 999999999;
+			transform: translate(-10%, -50%); left: 58.8%; color: #666}
+.loading p > i {color: #5eb85e;}
 
 /* item4 그래프 */
 .item4_box {max-width: 1000px; margin: 0 auto; padding-top: 40px;}
