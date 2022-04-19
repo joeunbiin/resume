@@ -256,7 +256,7 @@ a:hover {color: #000;}
 
 
 /* item7 Please */
-.item7_box {max-width: 800px; margin: 0 auto; padding-top: 40px; padding-bottom: 30px;}
+/* .item7_box {max-width: 800px; margin: 0 auto; padding-top: 40px; padding-bottom: 30px;}
 .form1 {border: 4px double #228b22; border-radius: 10px; }
 .form1 fieldset {margin: 2% 3%}  
 .form1 p {padding: 1% 0; text-align: left;}
@@ -275,7 +275,7 @@ a:hover {color: #000;}
 .form1 P:nth-of-type(6) button[type=reset] {cursor: pointer;}
 .form1 P:nth-of-type(6) button[type=reset]:hover {background: #1a691a}
 .please ::placeholder {color: #222; font-family: 'Noto Serif KR', serif; 
-					   padding-left: 1%; font-size: 13px;}		
+					   padding-left: 1%; font-size: 13px;}		 */
 
 
 /* item8 THE END*/
@@ -283,4 +283,4 @@ a:hover {color: #000;}
 .item8_box p {text-align: center; line-height: 2; font-size: 20px; padding-top: 40px;}
 #item8 {position: relative;}
 #item8 span {font-size: 70px; font-weight: bold; font-family: 'Cedarville Cursive', cursive;
-			 position: absolute; bottom: -35%; right: 10%; transform: rotate(-7deg);}
+			 position: absolute; bottom: -50px; right: 150px; transform: rotate(-7deg);}
